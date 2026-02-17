@@ -64,38 +64,38 @@ def extract_summary_llm(content, date):
     
     This provides much better summarization than heuristics.
     """
-    prompt = f"""你是一个记忆整理助手。请从以下日志中提取关键信息，生成简洁的每日总结。
+    prompt = f"""You are a memory organization assistant. Extract key information from the following log and generate a concise daily summary.
 
-**日期:** {date.strftime('%Y-%m-%d (%A)')}
+**Date:** {date.strftime('%Y-%m-%d (%A)')}
 
-**原始日志:**
+**Original Log:**
 {content}
 
-**提取要求:**
-1. **关键事件** - 今天完成了什么重要的事
-2. **决策和推理** - 做了什么决定，为什么这么做
-3. **学习和洞察** - 学到了什么新知识或技能
-4. **待办和跟进** - 需要后续跟进的事项
-5. **问题和挑战** - 遇到的问题和解决方案
+**Extraction Requirements:**
+1. **Key Events** - What important things were accomplished today
+2. **Decisions & Reasoning** - What decisions were made and why
+3. **Learning & Insights** - What new knowledge or skills were learned
+4. **Follow-ups** - Items that need future attention
+5. **Problems & Solutions** - Issues encountered and how they were resolved
 
-**输出格式:**
-使用 Markdown，简洁明了，保留关键数据和细节。
-每个部分用 ### 标题，如果某部分没有内容就跳过。
+**Output Format:**
+Use Markdown, concise and clear, preserve key data and details.
+Use ### headings for each section. Skip sections with no content.
 
-**示例:**
-### 关键事件
-- 完成 stats-viz skill 开发（2次迭代，最终版本美观）
-- 实现新的自动化工作流
+**Example:**
+### Key Events
+- Completed stats-viz skill development (2 iterations, final version polished)
+- Implemented new automation workflow
 
-### 决策和推理
-- 选择订阅技术相关频道（避免噪音）
-- 决定整合社区最佳实践到现有系统
+### Decisions & Reasoning
+- Chose to subscribe to technical channels (avoid noise)
+- Decided to integrate community best practices into existing system
 
-### 学习和洞察
-- 50+ agents 独立发现了相同的三层记忆架构
-- "立即写入"原则：Mental notes 不会存活到下次会话
+### Learning & Insights
+- 50+ agents independently discovered the same three-layer memory architecture
+- "Write immediately" principle: Mental notes don't survive to next session
 
-现在请提取今天的日志："""
+Now extract today's log:"""
 
     try:
         # Call OpenClaw's LLM via subprocess
