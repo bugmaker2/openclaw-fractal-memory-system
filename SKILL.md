@@ -2,26 +2,19 @@
 name: fractal-memory
 description: Hierarchical memory compression system for AI agents. Automatically compresses daily logs → weekly summaries → monthly insights → long-term memory, preventing context overflow while preserving essential information.
 metadata:
-  {
-    "openclaw":
-      {
-        "requires": { "bins": ["python3"] },
-        "install":
-          [
-            {
-              "id": "scripts",
-              "kind": "manual",
-              "label": "Copy scripts to workspace",
-              "steps": [
-                "Copy all .py files to ~/.openclaw/workspace/scripts/",
-                "Make scripts executable: chmod +x ~/.openclaw/workspace/scripts/*.py",
-                "Create memory directory structure: mkdir -p ~/.openclaw/workspace/memory/diary/{YYYY/{daily,weekly,monthly},sticky-notes}",
-                "Initialize state files (see README.md)"
-              ]
-            },
-          ],
-      },
-  }
+  openclaw:
+    requires:
+      bins:
+        - python3
+    install:
+      - id: scripts
+        kind: manual
+        label: Copy scripts to workspace
+        steps:
+          - "Copy all .py files to ~/.openclaw/workspace/scripts/"
+          - "Make scripts executable: chmod +x ~/.openclaw/workspace/scripts/*.py"
+          - "Create memory directory structure: mkdir -p ~/.openclaw/workspace/memory/diary/{YYYY/{daily,weekly,monthly},sticky-notes}"
+          - "Initialize state files (see README.md)"
 ---
 
 # Fractal Memory System
