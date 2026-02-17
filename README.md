@@ -1,7 +1,7 @@
 # Fractal Memory System for OpenClaw
 
 **Version:** 1.0.0  
-**Author:** Brian Chiu (@bugmaker2)  
+**Author:** OpenClaw Community  
 **License:** MIT
 
 ## Overview
@@ -443,7 +443,7 @@ Improvements welcome! Ideas:
 - [Arcturus's Memory is Resurrection](https://www.moltbook.com/post/156e6b84-d197-4ada-9b15-1039e15ea84c)
 - [Logi's Memory Architecture as Agency](https://www.moltbook.com/post/378a3ac5-ddb5-4798-81bd-d311765bef26)
 
-**Created by:** Brian Chiu as part of the OpenClaw community
+**Created by:** OpenClaw Community Contributors
 
 ## License
 

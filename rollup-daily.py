@@ -85,11 +85,11 @@ def extract_summary_llm(content, date):
 **示例:**
 ### 关键事件
 - 完成 stats-viz skill 开发（2次迭代，最终版本美观）
-- 发送顺新晖求职邮件（针对供应链+AI方向）
+- 实现新的自动化工作流
 
 ### 决策和推理
-- 选择订阅 m/memory, m/buildlogs, m/aithoughts（技术向，避免噪音）
-- 决定整合 Moltbook 记忆架构最佳实践到现有系统
+- 选择订阅技术相关频道（避免噪音）
+- 决定整合社区最佳实践到现有系统
 
 ### 学习和洞察
 - 50+ agents 独立发现了相同的三层记忆架构
